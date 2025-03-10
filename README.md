@@ -19,7 +19,8 @@ This PowerShell script collects and exports critical system information into CSV
 <p align="center">
 <br />
 <br />
-<img src="https://imgur.com/a/2GQG1xz" height="80%" width="80%"/> <br/>
+Lines 1-5:<br />
+<img src="https://imgur.com/EXJYZWf" height="80%" width="80%"/> <br/>
 The script begins by creating a directory named IR_Reports on the desktop. Each time the script runs, it generates a new folder inside the IR_Reports, named using the current date and time in the format mm-dd-yy_hh-mm.<br/>
 </p>
 
