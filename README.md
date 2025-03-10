@@ -1,7 +1,7 @@
 <h1>PowerShell Incident Response Script</h1>
 
 <h2>Description</h2>
-This is a PowerShell script that collects and exports critical system information into CSV files for security auditing and incident response. It creates a timestamped folder on the desktop and saves details about running processes, network connections, security event logs, missing updates, password policies, unnecessary services, and firewall rules. The script is triggered by specified tasks within the Task Scheduler, which will automatically run the script whenever one of the tasks is triggered. This project captures a snapshot of the system's state during potential security incidents for further analysis. 
+This PowerShell script collects and exports critical system information into CSV files for security auditing and incident response. The script is triggered by specified tasks within the Task Scheduler, which will automatically run the script whenever one of the tasks is triggered. This project captures a snapshot of the system's state during potential security incidents for further analysis. 
 <br />
 
 
@@ -19,8 +19,8 @@ This is a PowerShell script that collects and exports critical system informatio
 <p align="center">
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/2GQG1xz" height="80%" width="80%"/> <br/>
+The script begins by creating a directory named IR_Reports on the desktop. Each time the script runs, it generates a new folder inside the IR_Reports, named using the current date and time in the format mm-dd-yy_hh-mm.<br/>
 </p>
 
 <!--
