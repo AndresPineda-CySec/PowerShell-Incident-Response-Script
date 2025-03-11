@@ -43,7 +43,12 @@ Line 14 creates the variable "missingUpdates," which uses Get-WmiObject to query
 <br />
 Lines 17-24: <br />
 <img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/Screenshot%202025-03-11%20031410.png?raw=true" height="200%" width="200%"/> <br />
-Line 17 retrieves the default domain password policy using the command "Get-ADDefaultDomainPasswordPolicy" and filters the output to include only MinPasswordLength, LockoutThreshold, and MaxPasswordAge; the results are stored in the "pwPolicy" variable. Lines 18-20 declare that if a password policy is found, it is exported to a CSV file named "Password_Policy." Lines 21-24 generate a warning message if no policy is detected, highlighting the security risks of not having a password policy, and save it to a .T file named "Password_Policy_WARNING." This ensures that the system's password policy is documented or flagged for review if missing.<br />
+Line 17 retrieves the default domain password policy using the command "Get-ADDefaultDomainPasswordPolicy" and filters the output to include only MinPasswordLength, LockoutThreshold, and MaxPasswordAge; the results are stored in the "pwPolicy" variable. Lines 18-20 declare that if a password policy is found, it is exported to a CSV file named "Password_Policy." Lines 21-24 generate a warning message if no policy is detected, highlighting the security risks of not having a password policy, and saves it to a .T file named "Password_Policy_WARNING." This ensures that the system's password policy is documented or flagged for review if missing.<br />
+<br />
+<br />
+Lines 26 and 27: <br />
+<img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/Screenshot%202025-03-11%20033146.png?raw=true" height="200%" width="200%"/> <br />
+Line 26 retrieves all services using Get-Service and filters them to include only those set to start automatically (StartType -eq "Automatic"), not currently running (Status -ne "Running"), and not related to core Windows functionality (DisplayName -notmatch "Windows"). These services are stored in the $services variable. Line 2 exports the filtered services to a CSV file named Unnecessary_Services.csv, including properties like DisplayName (and potentially others, such as StartType or Status, depending on the intended output). This helps identify unnecessary or problematic services that are configured to start automatically but are not running.
 </p>
 
 <!--
