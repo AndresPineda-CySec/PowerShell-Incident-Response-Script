@@ -48,7 +48,11 @@ Line 17 retrieves the default domain password policy using the command "Get-ADDe
 <br />
 Lines 26 and 27: <br />
 <img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/Screenshot%202025-03-11%20033146.png?raw=true" height="200%" width="200%"/> <br />
-Line 26 retrieves all services using Get-Service and filters them to include only those set to start automatically (StartType -eq "Automatic"), not currently running (Status -ne "Running"), and not related to core Windows functionality (DisplayName -notmatch "Windows"). These services are stored in the $services variable. Line 2 exports the filtered services to a CSV file named Unnecessary_Services.csv, including properties like DisplayName (and potentially others, such as StartType or Status, depending on the intended output). This helps identify unnecessary or problematic services that are configured to start automatically but are not running.
+Line 26 retrieves all services using the command "Get-Service" and filters the services to include only those set to start automatically (StartType -eq "Automatic"), not currently running (Status -ne "Running"), and not related to core Windows functionality (DisplayName -notmatch "Windows"). These services are stored in the "services" variable. Line 27 exports the filtered services to a CSV file named "Unnecessary_Services."<br />
+<br />
+<br />
+Lines 26 and 27: <br />
+<img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/Screenshot%202025-03-11%20033146.png?raw=true" height="200%" width="200%"/> <br />
 </p>
 
 <!--
