@@ -29,7 +29,7 @@ Lines 7 and 9 both collect system information. Line 7 uses Get-Process to list a
 <br />
 Lines 11 and 12:<br />
 <img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/Screenshot%202025-03-11%20020551.png?raw=true" height="200%" width="200%"/> <br/>
-Line 11 starts with declaring the variable "events," which goes through the Windows event logs using the command Get-WinEvent. I Filter out which logs I want to be documented by using the command -FilterHashtable and two parameters: LogName, which is set to only back Security logs, and StartTime, which is set to only look as far back as 24 hours(This is done through the .AddDays(-1) command). Line 12 simply calls the "events" variable and routes the output through the pipe into the CSV named "Event_Logs."
+In line 11, the variable "events" is declared and populated using the Get-WinEvent command, which retrieves Windows event logs. The -FilterHashtable parameter is used to filter the logs, specifying two key criteria: "LogName = 'Security'" will only search for Security logs, and "StartTime = (Get-Date).AddDays(-1)" will limit the result to events from the last 24 hours. Line 12 then takes the "events" variable, pipes the output, and exports it to a CSV file named "Event_Logs."
 </p>
 
 <!--
