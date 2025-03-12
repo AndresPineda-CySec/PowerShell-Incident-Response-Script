@@ -10,11 +10,21 @@ This PowerShell script collects and exports critical system information into CSV
 - <b>Windows PowerShell ISE</b> 
 - <b>Task Scheduler</b>
 
-<h2>Environments Used </h2>
+<h2>Environments Used</h2>
 
 - <b>Windows 11</b>
 
-<h2>Program walk-through:</h2>
+<h2>Skills Demonstrated</h2>
+
+- <b>PowerShell Scripting</b>
+- <b>File and Folder Management</b>
+- <b>System Monitoring</b>
+- <b>Vulnerability Assessment</b>
+- <b>Data Export and Reporting</b>
+- <b>Task Automation</b>
+- <b>Security and Compliance</b>
+
+<h2>Project Walk-Through:</h2>
 
 <h3>Script Breakdown:</h3>
 <p align="center">
