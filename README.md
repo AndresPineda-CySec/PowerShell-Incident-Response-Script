@@ -32,7 +32,6 @@ The Complete Script:<br />
 <img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/images/Full.png?raw=true" height="200%" width="200%"/> <br />
 <br />
 <br />
-,raw=true" height="200%" width="200%"/> <br />
 Lines 7 and 9 both collect system information. Line 7 uses Get-Process to list all currently running programs, and Select-Object specifies which details to include. The output is then passed through a pipe ( | ) and saved as a CSV file named "Running_Processes" in the timestamped folder within IR_Reports. Line 9 works similarly but uses Get-NetTCPConnection to gather active network connections. Again, Select-Object filters the data, and the results are saved as "Network_Connections" in the same folder. Both lines use pipes to streamline the process of collecting, filtering, and exporting data. Both lines also refer to the variable fullReportPath from line 4, a pattern that will be used throughout the script.<br />
 <br />
 <br />
